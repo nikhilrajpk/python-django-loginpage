@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+<nav class="navbar ">
+    <div class="container justify-content-between">
+        <h1 class="text-primary">HOME</h1>
+        <form action="{% url 'user_logout' %}" method="post" id="home-form">
+            {% csrf_token %}
+            <button class="btn btn-lg btn-outline-primary" type="submit">Logout</button>
+        </form>
+    </div>
+  </nav>
+  {% endblock content %}
